@@ -1,0 +1,134 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+}
+
+/* ------------------------- */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: #fff;
+}
+
+.attribution a {
+  color: rgb(170, 92, 219);
+}
+
+/* ------------------------- */
+.container,
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: hsl(233deg, 47%, 7%);
+}
+
+.container {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1em;
+  min-height: 100vh;
+}
+
+.card {
+  width: 100%;
+  max-width: 345px;
+  background-color: #1b1938;
+  color: hsla(0deg, 0%, 100%, 0.75);
+  border-radius: 10px;
+  box-shadow: 0px 6px 13px -1px rgb(14, 14, 22);
+  overflow: hidden;
+}
+.card__img {
+  position: relative;
+}
+.card__img-mobile, .card__img-desktop, .card__img-shadow {
+  width: 100%;
+}
+.card__img-mobile {
+  display: block;
+}
+.card__img-desktop {
+  display: none;
+}
+.card__img-shadow {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background-color: rgba(86, 15, 131, 0.637);
+}
+.card__body {
+  padding: 2.5em 2em;
+}
+.card__heading, .card__numbers-heading {
+  color: hsl(0deg, 0%, 100%);
+}
+.card__heading-span {
+  font-family: "Lexend Deca", sans-serif;
+  color: rgb(170, 92, 219);
+}
+.card__text {
+  padding: 1.5em 1em 1.2em;
+  line-height: 26px;
+}
+.card__numbers-heading {
+  margin-top: 1em;
+  font-size: 2.6rem;
+}
+.card__numbers-text {
+  margin-top: 0.8em;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 1400px) {
+  .card,
+.card__numbers-box {
+    display: flex;
+  }
+  .card {
+    flex-direction: row-reverse;
+    align-items: center;
+    min-width: 1150px;
+  }
+  .card__img, .card__body {
+    width: 50%;
+  }
+  .card__img-mobile {
+    display: none;
+  }
+  .card__img-desktop {
+    display: block;
+  }
+  .card__body {
+    padding: 0 2em 0 5em;
+    text-align: left;
+  }
+  .card__heading {
+    font-size: 3.7rem;
+  }
+  .card__text {
+    padding: 1.5em 6em 1.2em 0;
+  }
+  .card__numbers-box {
+    margin-top: 2.5em;
+    gap: 3.5em;
+  }
+  .card__numbers-text {
+    margin-top: 0.5em;
+    font-size: 1.2rem;
+  }
+}/*# sourceMappingURL=style.css.map */

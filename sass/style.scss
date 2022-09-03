@@ -1,0 +1,161 @@
+@use './colors' as *;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	font-size: 1.5rem;
+}
+
+/* ------------------------- */
+.attribution {
+	font-size: 11px;
+	text-align: center;
+	color: #fff;
+}
+.attribution a {
+	color: $violet-accent;
+}
+/* ------------------------- */
+
+.container,
+footer {
+	display: flex;
+	justify-content: center;
+	background-color: $main-background;
+}
+
+.container {
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 1em;
+	min-height: 100vh;
+}
+
+.card {
+	width: 100%;
+	max-width: 345px;
+	background-color: $card-background;
+	color: $main-paragraph;
+	border-radius: 10px;
+	box-shadow: 0px 6px 13px -1px rgba(14, 14, 22, 1);
+	overflow: hidden;
+
+	&__img {
+		position: relative;
+
+		&-mobile,
+		&-desktop,
+		&-shadow {
+			width: 100%;
+		}
+
+		&-mobile {
+			display: block;
+		}
+
+		&-desktop {
+			display: none;
+		}
+
+		&-shadow {
+			position: absolute;
+			top: 0;
+			height: 100%;
+			background-color: rgba(86, 15, 131, 0.637);
+		}
+	}
+
+	&__body {
+		padding: 2.5em 2em;
+	}
+
+	&__heading,
+	&__numbers-heading {
+		color: $main-heading;
+	}
+
+	&__heading {
+		&-span {
+			font-family: 'Lexend Deca', sans-serif;
+			color: $violet-accent;
+		}
+	}
+
+	&__text {
+		padding: 1.5em 1em 1.2em;
+		line-height: 26px;
+	}
+
+	&__numbers-heading {
+		margin-top: 1em;
+		font-size: 2.6rem;
+	}
+
+	&__numbers-text {
+		margin-top: 0.8em;
+		font-size: 1.3rem;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+	}
+}
+
+@media (min-width: 1400px) {
+	.card,
+	.card__numbers-box {
+		display: flex;
+	}
+
+	.card {
+		flex-direction: row-reverse;
+		align-items: center;
+		min-width: 1150px;
+
+		&__img,
+		&__body {
+			width: 50%;
+		}
+
+		&__img-mobile {
+			display: none;
+		}
+
+		&__img-desktop {
+			display: block;
+		}
+
+		&__body {
+			padding: 0 2em 0 5em;
+			text-align: left;
+		}
+
+		&__heading {
+			font-size: 3.7rem;
+		}
+
+		&__text {
+			padding: 1.5em 6em 1.2em 0;
+		}
+
+		&__numbers-box {
+			margin-top: 2.5em;
+			gap: 3.5em;
+		}
+
+		&__numbers-text {
+			margin-top: 0.5em;
+			font-size: 1.2rem;
+		}
+	}
+}
